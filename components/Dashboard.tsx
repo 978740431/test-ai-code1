@@ -1,4 +1,6 @@
 
+"use client";
+
 import React from 'react';
 import { MOCK_INVOICES } from '../constants';
 import { InvoiceStatus } from '../types';
@@ -46,7 +48,6 @@ export const Dashboard: React.FC = () => {
           </div>
           
           <div className="h-64 flex items-end justify-between gap-2 px-2 relative">
-             {/* Mock Chart using CSS/Borders */}
              {[45, 70, 55, 90, 65, 85].map((height, i) => (
                <div key={i} className="flex-1 flex flex-col items-center gap-2 group">
                  <div 
@@ -62,7 +63,6 @@ export const Dashboard: React.FC = () => {
                  </span>
                </div>
              ))}
-             {/* Simple background grid lines */}
              <div className="absolute inset-x-0 bottom-8 h-[1px] bg-slate-100 dark:bg-gray-800 z-0"></div>
              <div className="absolute inset-x-0 top-1/2 h-[1px] bg-slate-100 dark:bg-gray-800 z-0"></div>
           </div>

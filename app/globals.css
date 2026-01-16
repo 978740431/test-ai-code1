@@ -1,0 +1,44 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 16, 20, 24;
+  --background-rgb: 246, 247, 248;
+}
+
+.dark {
+  --foreground-rgb: 243, 244, 246;
+  --background-rgb: 20, 25, 30;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 1;
+}
+
+.condensed-grid td, .condensed-grid th { 
+  padding: 10px 14px; 
+  font-size: 13px; 
+}
+
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none; 
+}
+
+/* Base Form Styles for Consistency */
+input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], select, textarea {
+  @apply border-border-slate focus:border-primary focus:ring-1 focus:ring-primary/20 text-[13px] placeholder:text-slate-400 rounded-sm w-full py-2 px-3 transition-all;
+}
+
+label {
+  @apply block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5;
+}

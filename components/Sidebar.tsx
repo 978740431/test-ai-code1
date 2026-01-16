@@ -1,4 +1,6 @@
 
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import { ViewType } from '../types';
 
@@ -9,8 +11,6 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  
-  // The sidebar shrinks when in Settings view to allow more space for sub-navigation
   const isCollapsed = currentView === 'SETTINGS';
 
   useEffect(() => {
